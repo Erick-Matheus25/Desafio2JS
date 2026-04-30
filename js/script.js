@@ -185,4 +185,79 @@ function MenuBebidas() {
             document.getElementById("res17").innerHTML = "Opção inválida!";
     }
 }
-              
+
+          function VogalOuConsoante() {
+    let letra = prompt("Digite uma letra:").toLowerCase();
+    if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
+        document.getElementById("res19").innerHTML = "A letra digitada é uma vogal.";
+    } else {
+        document.getElementById("res19").innerHTML = "A letra digitada é uma consoante.";
+    }
+}
+function CalculadoraSimples() {
+    let num1 = parseFloat(prompt("Digite o primeiro número:"));
+    let num2 = parseFloat(prompt("Digite o segundo número:"));
+    let operacao = prompt("Escolha a operação: +, -, *, /");    
+    switch (operacao) {
+        case "+":
+            document.getElementById("res19").innerHTML = "Resultado: " + (num1 + num2);
+            break;
+        case "-":
+            document.getElementById("res19").innerHTML = "Resultado: " + (num1 - num2);
+            break;
+        case "*":
+            document.getElementById("res19").innerHTML = "Resultado: " + (num1 * num2);
+            break;
+        case "/":
+            if (num2 === 0) {
+                document.getElementById("res19").innerHTML = "Erro: Divisão por zero!";
+            } else {
+                document.getElementById("res19").innerHTML = "Resultado: " + (num1 / num2);
+            }
+        } 
+          }
+         function ConversordeMoedasPro() {
+    let valor = parseFloat(prompt("Digite o valor em Reais:"));
+    let moeda = parseInt(prompt("Para qual moeda deseja converter:\n1 - Dólar\n2 - Euro\n3 - Peso Argentino"));
+
+    if (isNaN(valor) || isNaN(moeda)) {
+        document.getElementById("res20").innerHTML = "Entrada inválida!";
+        return;
+    }
+
+    switch (moeda) {
+        case 1:
+            document.getElementById("res20").innerHTML =
+                "R$ " + valor.toFixed(2) + " equivalem a US$ " + (valor / 5.0).toFixed(2);
+            break;
+
+        case 2:
+            document.getElementById("res20").innerHTML =
+                "R$ " + valor.toFixed(2) + " equivalem a € " + (valor / 6.0).toFixed(2);
+            break;
+
+        case 3:
+            document.getElementById("res20").innerHTML =
+                "R$ " + valor.toFixed(2) + " equivalem a ARS$ " + (valor * 20.0).toFixed(2);
+            break;
+
+        default:
+            document.getElementById("res20").innerHTML = "Opção de moeda inválida!";
+    }
+}
+           function ContagemProgressiva() {
+            let i = 1;
+            while (i <= 50) {
+                console.log(i);
+                i++;
+                
+            }
+
+        }
+
+
+        
+
+
+  
+    
