@@ -16,7 +16,6 @@ function mostrarTexto() {
 function somar() {
     let num1 = parseFloat(document.getElementById("num1").value);
     let num2 = parseFloat(document.getElementById("num2").value);
-
     if (isNaN(num1) || isNaN(num2)) {
         alert("Digite números válidos!");
     } else {
@@ -24,12 +23,10 @@ function somar() {
         document.getElementById("res3").innerHTML = num1 + " + " + num2 + " = " + resultado;
     }
 }
-
 function calcularMedia() {
     let nota1 = parseFloat(document.getElementById("nota1").value);
     let nota2 = parseFloat(document.getElementById("nota2").value);
     let nota3 = parseFloat(document.getElementById("nota3").value);
-
     if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
         alert("Digite notas válidas!");
     } else {
@@ -47,12 +44,10 @@ function calcularMedia() {
 
 async function converterDolar() {
     let reais = parseFloat(document.getElementById("reais").value);
-
     if (isNaN(reais)) {
         alert("Digite um valor válido em Reais!");
         return;
     }
-
     try {
         const response = await fetch('https://economia.awesomeapi.com.br/json/last/USD-BRL');
         const data = await response.json();
